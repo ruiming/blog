@@ -8,7 +8,7 @@ class Post extends Model
 {
     //
     protected $fillable = [
-        'title', 'subtitle', 'content','is_draft','archive','author'
+        'title', 'subtitle', 'content','is_draft','archive','author','read'
     ];
     public function setTitleAttribute($value)
     {

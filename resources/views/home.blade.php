@@ -17,8 +17,8 @@
                             </p>
                         </div>
                         <div class="post-meta post-divide">
-                            <span class="glyphicon glyphicon-tag">{{ $post->archive }}</span>
-                            <span class="glyphicon glyphicon-eye-open">{{ $post->read }} </span>
+                            <span class="glyphicon glyphicon-tag">分类:{{ $post->archive }}</span>
+                            <span class="glyphicon glyphicon-eye-open">阅读:{{ $post->read }} </span>
                             <span class="glyphicon glyphicon-comment ds-thread-count"  data-thread-key="{{$post->id}}" data-count-type="comments"></span>
                             <span class="glyphicon glyphicon-time">最近修改于{{$times[$key]}}</span>
                         </div>

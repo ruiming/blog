@@ -9,7 +9,6 @@ use App\Jobs\PostFormFields;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
 use EndaEditor;
-use Redis;
 class PostController extends Controller
 {
     public function upload()
@@ -24,15 +23,6 @@ class PostController extends Controller
     public function index()
     {
         $posts=Post::orderBy('created_at','desc')->get();
-        $redis=Redis::connection();
-        foreach($posts as $post)
-        {
-            if($redis->exists('post'.$post->id))
-            {
-                $post->read=$redis->get('post'.$post->id);
-            }
-            else $post->read=0;
-        }
         return view('admin.post.index')->withPosts($posts);
     }
 

@@ -178,6 +178,7 @@ li
     padding: 15px 20px;
     border-bottom: 1px dashed #E0E0E0;
 }
+
 .fix
 {
     height:30px;
@@ -255,6 +256,11 @@ li
 {
     margin: 5px 0;
 }
+.btn-submit
+{
+    margin: 20px 0 !important;
+    width: 100%;
+}
 .form-underline
 {
     background-color: #F5F5F5;
@@ -275,7 +281,8 @@ li
 }
 input[class="form-underline"]:focus
 {
-    border-bottom: 1px solid black;
+    outline:none;
+    border-bottom: 1px solid #87C6F9;
 }
 .table-my th
 {

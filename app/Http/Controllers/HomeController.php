@@ -4,13 +4,11 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Http\Requests;
 use EndaEditor;
-use Redis;
 class HomeController extends Controller
 {
     public function index()
     {
         $posts=Post::where('is_draft','==',0)->orderBy('updated_at','desc')->take(5)->get();
-        $redis=Redis::connection();
         $times=array();
         foreach($posts as $key => $post)
         {
@@ -25,11 +23,6 @@ class HomeController extends Controller
             else if($hours==0&&$mins>0) $times[$key]=$mins."分钟前";
             else if($mins<=0)   $times[$key]="1分钟前";
             $post->content=EndaEditor::MarkDecode($post->content);
-            if($redis->exists('post'.$post->id))
-            {
-                $post->read=$redis->get('post'.$post->id);
-            }
-            else $post->read=0;
         }
         return view('home')->withPosts($posts)->withTimes($times);
     }

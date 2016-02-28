@@ -11,13 +11,6 @@
 |
 */
 
-Route::get('/','BlogController@main');
-Route::get('/post/{slug}','BlogController@showPost');
-
-Route::get('/archive','ArchiveController@getArchive');
-Route::get('/archive/{id}','ArchiveController@category');
-Route::get('/date/{year}/{month}','ArchiveController@date');
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -29,13 +22,17 @@ Route::get('/date/{year}/{month}','ArchiveController@date');
 |
 */
 Route::group(['middleware' => 'web'], function () {
+    Route::get('/','BlogController@main');
+    Route::get('/post/{slug}','BlogController@showPost');
+    Route::get('/archive','ArchiveController@getArchive');
+    Route::get('/archive/{id}','ArchiveController@category');
+    Route::get('/date/{year}/{month}','ArchiveController@date');
     Route::auth();
 });
 Route::group(['middleware'=>['web','auth']],function(){
     Route::get('/admin','HomeController@index');
     Route::Resource('/admin/post', 'PostController');
     Route::Resource('/admin/archive','ArchiveController');
-
     Route::post('/upload','PostController@upload');
     Route::get('/admin/upload', 'UploadController@index');
     Route::post('admin/upload/file', 'UploadController@uploadFile');
