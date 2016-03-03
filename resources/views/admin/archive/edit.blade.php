@@ -1,13 +1,11 @@
 @extends('layouts.app')
-
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <h3>Archives <small>» Edit Archive</small></h3>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
@@ -36,12 +34,9 @@
                                         <i class="fa fa-times-circle"></i>
                                         Delete
                                     </button>
-
                                 </div>
                             </div>
-
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -77,5 +72,4 @@
             </div>
         </div>
     </div>
-
 @stop

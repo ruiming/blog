@@ -18,6 +18,7 @@ function is_image($mimeType)
 {
     return starts_with($mimeType, 'image/');
 }
+
 /**
  * Return "checked" if true
  */
@@ -40,6 +41,10 @@ function page_image($value = null)
 
     return $value;
 }
+
+/**
+ * 19950830 -> 1995年 8月
+ */
 function timeToDate($time)
 {
     if(strlen($time)==6){

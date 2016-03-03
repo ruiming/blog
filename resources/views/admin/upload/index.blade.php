@@ -1,8 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
-    <div class="container">
-
+    <div class="container-fluid">
         {{-- 顶部工具栏 --}}
         <div class="row">
             <div class="col-md-6">
@@ -106,7 +104,6 @@
     @include('admin.upload._modals')
 
     <script>
-
         // 确认文件删除
         function delete_file(name) {
             $("#delete-file-name1").html(name);
@@ -126,10 +123,5 @@
             $("#preview-image").attr("src", path);
             $("#modal-image-view").modal("show");
         }
-
-        // 初始化数据
-        $(function() {
-            $("#uploads-table").DataTable();
-        });
     </script>
 @stop

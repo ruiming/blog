@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xs-6">
                 <h3>Archives <small>» Listing</small></h3>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="col-xs-6 text-right">
                 <a href="/admin/archive/create" class="btn btn-success btn-md">
                     <i class="fa fa-plus-circle"></i> New Archive
                 </a>
@@ -21,7 +21,7 @@
                     <tr>
                         <th>Archive</th>
                         <th>Count</th>
-                        <th>Slug</th>
+                        <th class="xs-hidden">Slug</th>
                         <th>Created_at</th>
                         <th>Action</th>
                     </tr>
@@ -31,8 +31,8 @@
                         <tr>
                             <td>{{ $archive->name }}</td>
                             <td>{{ $archive->counts }}</td>
-                            <td>{{ $archive->slug }}</td>
-                            <td>{{ $archive->created_at }}</td>
+                            <td class="xs-hidden">{{ $archive->slug }}</td>
+                            <td>{{ $archive->created_at->format('Y-n-j') }}</td>
                             <td>
                                 <a href="/admin/archive/{{ $archive->id }}/edit" class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> Edit
@@ -45,13 +45,4 @@
             </div>
         </div>
     </div>
-@stop
-
-@section('scripts')
-    <script>
-        $(function() {
-            $("#archives-table").DataTable({
-            });
-        });
-    </script>
 @stop

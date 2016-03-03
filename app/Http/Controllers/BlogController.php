@@ -7,22 +7,31 @@ use EndaEditor;
 use App\Http\Requests;
 class BlogController extends Controller
 {
+
+    /**
+     * 博客首页
+     *
+     */
     public function main()
     {
-        $posts=Post::where('is_draft','==',0)
-            ->orderBy('created_at','desc')
+        $posts = Post::where('is_draft', '==', 0)
+            ->orderBy('created_at', 'desc')
             ->paginate(config('blog.posts_per_page'));
-        foreach($posts as $post)
-        {
-            $post->content=EndaEditor::MarkDecode($post->content);
+        foreach($posts as $post) {
+            $post->content = EndaEditor::MarkDecode($post->content);
         }
-        return view('blog.index',compact('posts'));
+        return view('blog.index', compact('posts'));
     }
 
+    /**
+     * 显示具体文章页面
+     *
+     * @param int $id 文章id
+     */
     public function showPost($id)
     {
-        $post=Post::whereId($id)->where('is_draft','==',0)->firstOrFail();
-        $post->content=EndaEditor::MarkDecode($post->content);
+        $post = Post::whereId($id)->where('is_draft', '==', 0)->firstOrFail();
+        $post->content = EndaEditor::MarkDecode($post->content);
         $read = Post::whereId($id)->first()->read;
         $read ++;
         Post::whereId($id)->update(['read' => $read]);

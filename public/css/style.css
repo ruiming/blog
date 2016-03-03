@@ -15,6 +15,9 @@ li
 {
     list-style-position: inside;
 }
+p img{
+    padding: 10px 0;
+}
 @media (max-width: 768px)
 {
     .container

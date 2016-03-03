@@ -1,20 +1,23 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <h3>Posts <small>» Edit New Post</small></h3>
             </div>
         </div>
-
         <div class="row">
             <div class="col-sm-12">
+
                 @include('admin.partials.errors')
                 @include('admin.partials.success')
+
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.post.update', $id) }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="_method" value="PUT">
+
                     @include('admin.post._form')
+
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-8 edit_action">
                                 <button type="submit" class="btn btn-success btn-lg" name="action" value="finished">
@@ -61,5 +64,4 @@
             </div>
         </div>
     </div>
-
 @stop

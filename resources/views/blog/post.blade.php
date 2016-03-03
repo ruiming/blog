@@ -7,6 +7,6 @@
         <hr>
         <p>{!! $post->content !!}</p>
         <hr>
-        @include('duoshuo.duoshuo')
+        @include('disqus.disqus')
     </div>
 @endsection
