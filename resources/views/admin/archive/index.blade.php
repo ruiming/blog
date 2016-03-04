@@ -3,11 +3,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-6">
-                <h3>Archives <small>» Listing</small></h3>
+                <h3>分类 <small>» 列表</small></h3>
             </div>
             <div class="col-xs-6 text-right">
                 <a href="/admin/archive/create" class="btn btn-success btn-md">
-                    <i class="fa fa-plus-circle"></i> New Archive
+                    <i class="fa fa-plus-circle"></i> 新分类
                 </a>
             </div>
         </div>
@@ -19,11 +19,11 @@
                 <table id="archives-table" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Archive</th>
-                        <th>Count</th>
+                        <th>分类</th>
+                        <th>文章数</th>
                         <th class="xs-hidden">Slug</th>
-                        <th>Created_at</th>
-                        <th>Action</th>
+                        <th>创建日期</th>
+                        <th>管理</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -35,7 +35,7 @@
                             <td>{{ $archive->created_at->format('Y-n-j') }}</td>
                             <td>
                                 <a href="/admin/archive/{{ $archive->id }}/edit" class="btn btn-xs btn-info">
-                                    <i class="fa fa-edit"></i> Edit
+                                    <i class="fa fa-edit"></i> 编辑
                                 </a>
                             </td>
                         </tr>

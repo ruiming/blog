@@ -3,11 +3,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-6">
-                <h3>Posts <small>» Listing</small></h3>
+                <h3>文章 <small>» 列表</small></h3>
             </div>
             <div class="col-xs-6 text-right">
                 <a href="/admin/post/create" class="btn btn-success btn-md">
-                    <i class="fa fa-plus-circle"></i> New Post
+                    <i class="fa fa-plus-circle"></i> 新文章
                 </a>
             </div>
         </div>
@@ -20,10 +20,10 @@
                 <table id="posts-table" class="table-my table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Published</th>
-                        <th>Title</th>
-                        <th class="hidden-xs">Archive</th>
-                        <th data-sortable="false" style="min-width:135px !important;">Actions</th>
+                        <th>发布时间</th>
+                        <th>标题</th>
+                        <th class="hidden-xs">分类</th>
+                        <th data-sortable="false" style="min-width:135px !important;">管理</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,10 +36,10 @@
                             <td class="hidden-xs">{{ $post->archive }}</td>
                             <td>
                                 <a href="/admin/post/{{ $post->id }}/edit" class="btn btn-xs btn-info">
-                                    <i class="fa fa-edit"></i> Edit
+                                    <i class="fa fa-edit"></i> 编辑
                                 </a>
                                 <a href="/post/{{ $post->id }}" class="btn btn-xs btn-warning">
-                                    <i class="fa fa-eye"></i> View
+                                    <i class="fa fa-eye"></i> 查看
                                 </a>
                             </td>
                         </tr>

@@ -33,12 +33,12 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @if(Auth::guest())
-                    <li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                    <li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-home"></span>控制台</a></li>
                     @else
-                    <li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-                    <li><a href="{{ url('/admin/post') }}"><span class="glyphicon glyphicon-file"></span>Post</a></li>
-                    <li><a href="{{ url('/admin/archive') }}"><span class="glyphicon glyphicon-tags"></span>Archive</a></li>
-                    <li><a href="{{ url('/admin/upload') }}"><span class="glyphicon glyphicon-upload"></span>Upload</a></li>
+                    <li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-home"></span>控制台</a></li>
+                    <li><a href="{{ url('/admin/post') }}"><span class="glyphicon glyphicon-file"></span>文章</a></li>
+                    <li><a href="{{ url('/admin/archive') }}"><span class="glyphicon glyphicon-tags"></span>分类</a></li>
+                    <li><a href="{{ url('/admin/upload') }}"><span class="glyphicon glyphicon-upload"></span>上传</a></li>
                     @endif
                 </ul>
                 <!-- Right Side Of Navbar -->
@@ -52,7 +52,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>注销</a></li>
                             </ul>
                         </li>
                     @endif

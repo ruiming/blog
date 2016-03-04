@@ -19,6 +19,7 @@ class BlogController extends Controller
             ->paginate(config('blog.posts_per_page'));
         foreach($posts as $post) {
             $post->content = EndaEditor::MarkDecode($post->content);
+            $post->content = preg_replace('(<a)', '<a target="_blank"', $post->content);
         }
         return view('blog.index', compact('posts'));
     }

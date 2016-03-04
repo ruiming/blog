@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h3>Posts <small>» Edit New Post</small></h3>
+                <h3>文章 <small>» 编辑文章</small></h3>
             </div>
         </div>
         <div class="row">
@@ -42,12 +42,12 @@
                         <button type="button" class="close" data-dismiss="modal">
                             ×
                         </button>
-                        <h4 class="modal-title">Please Confirm</h4>
+                        <h4 class="modal-title">请确认</h4>
                     </div>
                     <div class="modal-body">
                         <p class="lead">
                             <i class="fa fa-question-circle fa-lg"></i>
-                            Are you sure you want to delete this post?
+                            你确认要删除该文章吗?
                         </p>
                     </div>
                     <div class="modal-footer">

@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h3>Posts <small>» Add New Post</small></h3>
+                <h3>文章 <small>» 撰写新文章</small></h3>
             </div>
         </div>
         <div class="row">
@@ -13,7 +13,7 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     @include('admin.post._form')
                     <button type="submit" class="btn-submit btn btn-primary btn-lg">
-                        <i class="fa fa-disk-o"></i>Save New Post
+                        <i class="fa fa-disk-o"></i>发布
                     </button>
                 </form>
             </div>

@@ -3,14 +3,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h3>Archives <small>» Edit Archive</small></h3>
+                <h3>分类 <small>» 编辑分类</small></h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Archive Edit Form</h3>
+                        <h3 class="panel-title">编辑分类</h3>
                     </div>
                     <div class="panel-body">
 
@@ -28,11 +28,11 @@
                                 <div class="col-md-7 col-md-offset-3">
                                     <button type="submit" class="btn btn-primary btn-md">
                                         <i class="fa fa-save"></i>
-                                        Save Changes
+                                        保存
                                     </button>
                                     <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#modal-delete">
                                         <i class="fa fa-times-circle"></i>
-                                        Delete
+                                        删除
                                     </button>
                                 </div>
                             </div>
@@ -51,12 +51,12 @@
                     <button type="button" class="close" data-dismiss="modal">
                         ×
                     </button>
-                    <h4 class="modal-title">Please Confirm</h4>
+                    <h4 class="modal-title">请确认</h4>
                 </div>
                 <div class="modal-body">
                     <p class="lead">
                         <i class="fa fa-question-circle fa-lg"></i>
-                        Are you sure you want to delete this archive?
+                        确定要删除该分类?
                     </p>
                 </div>
                 <div class="modal-footer">

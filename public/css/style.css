@@ -4,7 +4,7 @@
     text-decoration: none;
     margin: 0 auto;
     padding: 0;
-    word-break: break-all;
+    word-break: normal;
     word-wrap: break-word;
 }
 body
@@ -17,6 +17,9 @@ li
 }
 p img{
     padding: 10px 0;
+}
+pre{
+    border: none !important;
 }
 @media (max-width: 768px)
 {

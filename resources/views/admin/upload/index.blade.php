@@ -16,10 +16,10 @@
             </div>
             <div class="col-md-6 text-right">
                 <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#modal-folder-create">
-                    <i class="fa fa-plus-circle"></i> New Folder
+                    <i class="fa fa-plus-circle"></i> 添加新文件夹
                 </button>
                 <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modal-file-upload">
-                    <i class="fa fa-upload"></i> Upload
+                    <i class="fa fa-upload"></i> 上传
                 </button>
             </div>
         </div>
@@ -33,11 +33,11 @@
                 <table id="uploads-table" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th class="hidden-xs">Type</th>
-                        <th>Date</th>
-                        <th>Size</th>
-                        <th data-sortable="false">Actions</th>
+                        <th>名称</th>
+                        <th class="hidden-xs">类型</th>
+                        <th>日期</th>
+                        <th>大小</th>
+                        <th data-sortable="false">管理</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -51,13 +51,13 @@
                                     {{ $name }}
                                 </a>
                             </td>
-                            <td class="hidden-xs">Folder</td>
+                            <td class="hidden-xs">文件夹</td>
                             <td>-</td>
                             <td>-</td>
                             <td>
                                 <button type="button" class="btn-me btn btn-xs btn-danger" onclick="delete_folder('{{ $name }}')">
                                     <i class="fa fa-times-circle fa-lg"></i>
-                                    Delete
+                                    删除
                                 </button>
                             </td>
                         </tr>
@@ -82,12 +82,12 @@
                             <td>
                                 <button type="button" class="btn-me btn btn-xs btn-danger" onclick="delete_file('{{ $file['name'] }}')">
                                     <i class="fa fa-times-circle fa-lg"></i>
-                                    Delete
+                                    删除
                                 </button>
                                 @if (is_image($file['mimeType']))
                                     <button type="button" class="btn-me btn btn-xs btn-success" onclick="preview_image('{{ $file['webPath'] }}')">
                                         <i class="fa fa-eye fa-lg"></i>
-                                        Preview
+                                        预览
                                     </button>
                                 @endif
                             </td>

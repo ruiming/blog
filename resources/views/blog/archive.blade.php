@@ -14,8 +14,9 @@
                 </div>
                 <div class="post-meta">
                     <span class="glyphicon glyphicon-tag">分类:{{ $post->archive }}</span>
-                    <span class="glyphicon glyphicon-comment ds-thread-count"  data-thread-key="{{$post->id}}"
-                          data-count-type="comments"></span>
+                    <span class="glyphicon glyphicon-comment disqus-comment-count"
+                          data-disqus-url="https://ruiming.me/post/{{$post->id}}">
+                    </span>
                     <span class="glyphicon glyphicon-eye-open">阅读:{{ $post->read }} </span>
                     <span class="glyphicon glyphicon-time">时间:{{ $post->created_at->format('Y-n-j') }}</span>
                     <a class="btn-design btn btn-primary" href="/post/{{$post->id}}">阅读全文</a>
@@ -23,4 +24,5 @@
             </li>
         @endforeach
     </ul>
+    <script id="dsq-count-scr" src="https://ruiming.disqus.com/count.js" async></script>
 @endsection

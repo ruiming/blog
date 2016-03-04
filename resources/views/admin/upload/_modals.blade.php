@@ -1,4 +1,4 @@
-{{-- 创建目录 --}}
+{{-- 创建文件夹 --}}
 <div class="modal fade" id="modal-folder-create">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -9,12 +9,12 @@
                     <button type="button" class="close" data-dismiss="modal">
                         ×
                     </button>
-                    <h4 class="modal-title">Create New Folder</h4>
+                    <h4 class="modal-title">创建新文件夹</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="new_folder_name" class="col-sm-3 control-label">
-                            Folder Name
+                            文件夹名
                         </label>
                         <div class="col-sm-8">
                             <input type="text" id="new_folder_name" name="new_folder" class="form-control">
@@ -23,10 +23,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Cancel
+                        取消
                     </button>
                     <button type="submit" class="btn btn-primary">
-                        Create Folder
+                        创建文件夹
                     </button>
                 </div>
             </form>
@@ -42,14 +42,14 @@
                 <button type="button" class="close" data-dismiss="modal">
                     ×
                 </button>
-                <h4 class="modal-title">Please Confirm</h4>
+                <h4 class="modal-title">请确认</h4>
             </div>
             <div class="modal-body">
                 <p class="lead">
                     <i class="fa fa-question-circle fa-lg"></i>
-                    Are you sure you want to delete the
-                    <kbd><span id="delete-file-name1">file</span></kbd>
-                    file?
+                    你确认要删除
+                    <kbd><span id="delete-file-name1">文件</span></kbd>
+                    吗?
                 </p>
             </div>
             <div class="modal-footer">
@@ -59,10 +59,10 @@
                     <input type="hidden" name="folder" value="{{ $folder }}">
                     <input type="hidden" name="del_file" id="delete-file-name2">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Cancel
+                        取消
                     </button>
                     <button type="submit" class="btn btn-danger">
-                        Delete File
+                        删除
                     </button>
                 </form>
             </div>
@@ -70,7 +70,7 @@
     </div>
 </div>
 
-{{-- 删除目录 --}}
+{{-- 删除文件夹 --}}
 <div class="modal fade" id="modal-folder-delete">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -78,14 +78,14 @@
                 <button type="button" class="close" data-dismiss="modal">
                     ×
                 </button>
-                <h4 class="modal-title">Please Confirm</h4>
+                <h4 class="modal-title">请确认</h4>
             </div>
             <div class="modal-body">
                 <p class="lead">
                     <i class="fa fa-question-circle fa-lg"></i>
-                    Are you sure you want to delete the
-                    <kbd><span id="delete-folder-name1">folder</span></kbd>
-                    folder?
+                    你确认要删除
+                    <kbd><span id="delete-folder-name1">文件夹</span></kbd>
+                    吗?
                 </p>
             </div>
             <div class="modal-footer">
@@ -95,10 +95,10 @@
                     <input type="hidden" name="folder" value="{{ $folder }}">
                     <input type="hidden" name="del_folder" id="delete-folder-name2">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Cancel
+                        取消
                     </button>
                     <button type="submit" class="btn btn-danger">
-                        Delete Folder
+                        删除
                     </button>
                 </form>
             </div>
@@ -117,12 +117,12 @@
                     <button type="button" class="close" data-dismiss="modal">
                         ×
                     </button>
-                    <h4 class="modal-title">Upload New File</h4>
+                    <h4 class="modal-title">上传新文件</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="file" class="col-sm-3 control-label">
-                            File
+                            文件
                         </label>
                         <div class="col-sm-8">
                             <input type="file" id="file" name="file">
@@ -130,7 +130,7 @@
                     </div>
                     <div class="form-group">
                         <label for="file_name" class="col-sm-3 control-label">
-                            Optional Filename
+                            文件名
                         </label>
                         <div class="col-sm-4">
                             <input type="text" id="file_name" name="file_name" class="form-control">
@@ -139,10 +139,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Cancel
+                        取消
                     </button>
                     <button type="submit" class="btn btn-primary">
-                        Upload File
+                        上传
                     </button>
                 </div>
             </form>
@@ -158,14 +158,14 @@
                 <button type="button" class="close" data-dismiss="modal">
                     ×
                 </button>
-                <h4 class="modal-title">Image Preview</h4>
+                <h4 class="modal-title">图片预览</h4>
             </div>
             <div class="modal-body">
                 <img id="preview-image" src="x" class="img-responsive">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Cancel
+                    取消
                 </button>
             </div>
         </div>
