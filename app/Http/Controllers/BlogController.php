@@ -24,7 +24,7 @@ class BlogController extends Controller
     }
 
     /**
-     * 显示具体文章页面
+     * 显示具体文章页面,阅读次数加1
      *
      * @param int $id 文章id
      */
@@ -33,8 +33,9 @@ class BlogController extends Controller
         $post = Post::whereId($id)->where('is_draft', '==', 0)->firstOrFail();
         $post->content = EndaEditor::MarkDecode($post->content);
         $read = Post::whereId($id)->first()->read;
+        $time = Post::whereId($id)->first()->updated_at;
         $read ++;
-        Post::whereId($id)->update(['read' => $read]);
+        Post::whereId($id)->update(['read' => $read, 'updated_at' => $time]);
         return view('blog.post')->withPost($post);
     }
 }

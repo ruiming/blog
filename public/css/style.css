@@ -20,7 +20,7 @@ p img{
 }
 @media (max-width: 768px)
 {
-    .container
+    .container, .container-fluid
     {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -92,7 +92,7 @@ p img{
 {
     float: left;
     padding: 5px 10px;
-    width: 160px;
+    width: 170px;
 }
 .post-meta a
 {
