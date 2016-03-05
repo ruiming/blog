@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Ruiming's blog</title>
+    <title>{{config('blog.title')}}</title>
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/simplemde.min.css') }}" rel="stylesheet">
@@ -26,7 +26,7 @@
                 </button>
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <span class="glyphicon glyphicon-dashboard"></span>Ruiming's blog
+                    <span class="glyphicon glyphicon-dashboard"></span>{{config('blog.title')}}
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="app-navbar-collapse">

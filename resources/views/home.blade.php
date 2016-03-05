@@ -5,7 +5,7 @@
         @foreach ($posts as $key => $post)
             <li class="post">
                 <h2 class="post-title">
-                    <a href="/post/{{ $post->id }}">{{ $post->title }}</a>
+                    <a href="{{config('blog.website')}}/post/{{ $post->id }}">{{ $post->title }}</a>
                 </h2>
                 <div class="post-content">
                     <p>{!! $post->content !!}</p>
@@ -14,7 +14,7 @@
                     <span class="glyphicon glyphicon-tag">分类:{{ $post->archive }}</span>
                     <span class="glyphicon glyphicon-eye-open">阅读:{{ $post->read }} </span>
                     <span class="glyphicon glyphicon-comment">
-                        <a href="//ruiming.me/post/{{ $post->id }}"></a>
+                        <a href="{{config('blog.website')}}/post/{{ $post->id }}"></a>
                     </span>
                     <span class="glyphicon glyphicon-time">最近修改于{{$times[$key]}}</span>
                 </div>
@@ -22,5 +22,5 @@
         @endforeach
     </ul>
 </div>
-<script id="dsq-count-scr" src="https://ruiming.disqus.com/count.js" async></script>
+<script id="dsq-count-scr" src="{{config('blog.disqus_url')}}" async></script>
 @stop

@@ -24,7 +24,7 @@ class ArchiveController extends Controller
     public function getArchive()
     {
         $categorys = Archive::orderBy('counts', 'desc')->get()->toarray();
-        $times = Post::get()->toarray();
+        $times = Post::orderBy('created_at', 'desc')->get()->toarray();
         $j = 0;
         $dates = array([]);
         foreach($times as $time) {

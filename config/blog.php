@@ -13,4 +13,6 @@ return [
         'webpath' => '/uploads',
     ],
     'author' => '庄瑞铭',
+    'disqus_url' => 'https://ruiming.disqus.com/count.js',
+    'website' => 'https://ruiming.me'
 ];
