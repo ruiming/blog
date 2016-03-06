@@ -35,9 +35,9 @@ Route::group(['middleware'=>['web','auth']],function(){
     Route::Resource('/admin/archive','ArchiveController');
     Route::post('/upload','PostController@upload');
     Route::get('/admin/upload', 'UploadController@index');
-    Route::post('admin/upload/file', 'UploadController@uploadFile');
-    Route::delete('admin/upload/file', 'UploadController@deleteFile');
-    Route::post('admin/upload/folder', 'UploadController@createFolder');
-    Route::delete('admin/upload/folder', 'UploadController@deleteFolder');
+    Route::post('/admin/upload/file', 'UploadController@uploadFile');
+    Route::delete('/admin/upload/file', 'UploadController@deleteFile');
+    Route::post('/admin/upload/folder', 'UploadController@createFolder');
+    Route::delete('/admin/upload/folder', 'UploadController@deleteFolder');
 });
 

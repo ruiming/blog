@@ -2,7 +2,7 @@
 @section('title', 'Page Title')
 @section('content')
     <ul class="archive">
-        <p><span class="glyphicon glyphicon-list-alt"></span>分类目录</p>
+        <p><span class="glyphicon glyphicon-list-alt"></span>分类</p>
         @foreach ($categorys as $category)
             <li class="archive">
                 <div class="archive-name">
@@ -12,7 +12,7 @@
             </li>
         @endforeach
         <div class="clearfix fix"></div>
-        <p><span class="glyphicon glyphicon-calendar"></span>文章归档</p>
+        <p><span class="glyphicon glyphicon-calendar"></span>时间</p>
         @foreach ($dates as $date)
             <li class="archive">
                 <div class="archive-name">

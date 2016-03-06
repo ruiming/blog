@@ -48,9 +48,9 @@ function page_image($value = null)
 function timeToDate($time)
 {
     if(strlen($time)==6){
-        return substr($time,0,4)."年 ".substr($time,5,2)."月";
+        return substr($time,0,4)."年".substr($time,5,2)."月";
     }
     else{
-        return substr($time,0,4)."年 ".substr($time,6,1)."月";
+        return substr($time,0,4)."年".substr($time,6,1)."月";
     }
 }

@@ -18,4 +18,8 @@ class Post extends Model
             $this->attributes['slug'] = str_slug($value);
         }
     }
+    public function getContentAttribute($value)
+    {
+        return preg_replace('(<a)', '<a target="_blank"', $value);
+    }
 }
