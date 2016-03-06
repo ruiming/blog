@@ -21,7 +21,7 @@
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::group(['middleware' => 'web'], function () {
+Route::group(['middleware' => ['web','throttle:30']], function () {
     Route::get('/','BlogController@main');
     Route::get('/post/{slug}','BlogController@showPost');
     Route::get('/archive','ArchiveController@getArchive');
