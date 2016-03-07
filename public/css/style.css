@@ -27,6 +27,8 @@ pre, pre code{
     {
         padding-left: 0 !important;
         padding-right: 0 !important;
+        overflow: hidden;
+        width: 100%;
     }
 }
 .navbar a

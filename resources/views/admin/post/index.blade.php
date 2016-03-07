@@ -20,16 +20,16 @@
                 <table id="posts-table" class="table-my table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>发布时间</th>
+                        <th class="hidden-xs">发布时间</th>
                         <th>标题</th>
                         <th class="hidden-xs">分类</th>
-                        <th data-sortable="false" style="min-width:135px !important;">管理</th>
+                        <th data-sortable="false" style="min-width:125px !important;">管理</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($posts as $post)
                         <tr>
-                            <td data-order="{{ $post->created_at->timestamp }}">
+                            <td class="hidden-xs" data-order="{{ $post->created_at->timestamp }}">
                                 {{ $post->created_at->format('Y-n-j') }}
                             </td>
                             <td>{{ $post->title }}</td>

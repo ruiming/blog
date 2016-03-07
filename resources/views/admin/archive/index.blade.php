@@ -21,8 +21,8 @@
                     <tr>
                         <th>分类</th>
                         <th>文章数</th>
-                        <th class="xs-hidden">Slug</th>
-                        <th>创建日期</th>
+                        <th class="hidden-xs">Slug</th>
+                        <th class="hidden-xs">创建日期</th>
                         <th>管理</th>
                     </tr>
                     </thead>
@@ -31,8 +31,8 @@
                         <tr>
                             <td>{{ $archive->name }}</td>
                             <td>{{ $archive->counts }}</td>
-                            <td class="xs-hidden">{{ $archive->slug }}</td>
-                            <td>{{ $archive->created_at->format('Y-n-j') }}</td>
+                            <td class="hidden-xs">{{ $archive->slug }}</td>
+                            <td class="hidden-xs">{{ $archive->created_at->format('Y-n-j') }}</td>
                             <td>
                                 <a href="/admin/archive/{{ $archive->id }}/edit" class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> 编辑
