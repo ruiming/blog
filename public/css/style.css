@@ -2,10 +2,8 @@
 {
     font-family: PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
     text-decoration: none;
-    margin: 0 auto;
     padding: 0;
     word-break: break-all;
-    word-wrap: normal;
 }
 body
 {
@@ -18,7 +16,9 @@ li
 p img{
     padding: 10px 0;
 }
-pre{
+pre, pre code{
+    white-space: pre !important;
+    word-wrap: normal;
     border: none !important;
 }
 @media (max-width: 768px)
@@ -350,22 +350,4 @@ input[class="form-underline"]:focus
     color: #34495e;
     font-size: 16px;
     line-height: 1.6em;
-}
-.CodeMirror-code
-{
-    width: 50% !important;
-    float: left;
-    padding-right: 15px;
-}
-.editor-preview
-{
-    padding-top: 4px !important;
-}
-.editor-preview img
-{
-    max-width: 100%;
-}
-.modal-dialog
-{
-    z-index: 2222 !important;
 }

@@ -159,7 +159,7 @@ $(function() {
      * mode选择"live", 'edit', 'preview'
      */
     Editor.prototype.render = function(el, mode, callback) {
-        mode = mode || 'live';
+        mode = mode || 'edit';
         el = $(el)[0];      //选中被渲染的textarea的DOM
         if (this._rendered && this._rendered === el) {
             // Already rendered.
@@ -519,7 +519,6 @@ $(function() {
         });
 
         this._rendered = this.element;
-
         //最后默认开启live模式
         if(mode === 'live') {
             $('.editor__menu--live').trigger('click');
@@ -808,9 +807,6 @@ $(document).ready(function () {\n\
         var cmWrapper = cm.getWrapperElement();
         cmWrapper.parentNode.insertBefore(bar, cmWrapper);
 
-        //为了添加样式
-        $('.CodeMirror').addClass('form-control')
-            .before(helpHtml);
         //帮助
         $('#editorHelpTab a').click(function (e) {
             var _$wrap = $(this).parent();
@@ -1695,11 +1691,12 @@ $(document).ready(function () {\n\
             wrapper.appendChild(preview);
         }
         var text = cm.getValue();
-        var _w = $('.CodeMirror-code').width() / 2 - 15 + 'px';
+        var _w = $('.CodeMirror-code').css('width', '50%');
         if(text === lastText) {
             setTimeout(function() {
                 $(preview).addClass('editor-preview-active onlive');
                 $('.CodeMirror-code').css('width', _w);
+                $('.CodeMirror-code').css('padding-right', '15px')
             }, 1);
         } else {
             preview.innerHTML = marked(text);
@@ -1707,6 +1704,7 @@ $(document).ready(function () {\n\
                 $(preview).addClass('editor-preview-active onlive');
                 // var _w = $('.CodeMirror-code').width() / 2 - 15 + 'px';
                 $('.CodeMirror-code').css('width', _w);
+                $('.CodeMirror-code').css('padding-right', '15px')
                 highLight($(preview));
             }, 1);
         }

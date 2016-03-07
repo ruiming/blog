@@ -56,7 +56,7 @@ function sfModal(option) {
         loaded     : function() {}
     }, option);
 
-    var dom = '<div class="sfmodal modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">\
+    var dom = '<div class="sfmodal modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">\
   <div class="modal-dialog">\
     <div class="modal-content">\
       '+(OPT.hideTitle ? '' : '<div class="modal-header">\
