@@ -197,6 +197,14 @@ pre, pre code{
     background-color: #337AB7 !important;
     margin-left: 5px;
 }
+.archive li
+{
+    list-style: none;
+}
+.archive-name span
+{
+    float:right
+}
 .btn-right
 {
     margin: 20px 0;
