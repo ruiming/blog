@@ -1,6 +1,6 @@
 *
 {
-    font-family: PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
     text-decoration: none;
     padding: 0;
     word-break: break-all;
@@ -9,10 +9,6 @@ body
 {
     background-color: #F5F5F5 !important;
 }
-li
-{
-    list-style-position: inside;
-}
 p img{
     padding: 10px 0;
 }
@@ -20,6 +16,10 @@ pre, pre code{
     white-space: pre !important;
     word-wrap: normal;
     border: none !important;
+}
+a:hover
+{
+    text-decoration: none;
 }
 @media (max-width: 768px)
 {
@@ -64,40 +64,91 @@ pre, pre code{
 {
     list-style: none;
     background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.post img,.blog img
+.post img
 {
     max-width: 100%;
 }
 .post-title
 {
-    font-size: 18px;
-    padding: 21px 28px 21px;
-    border-bottom: 1px dashed #E0E0E0;
+    padding: 20px 0;
+    border-bottom: 1px solid #EEEEEE;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.2;
 }
-.post-content, .blog
+.post-title a
 {
-    padding: 5px 28px;
-    border-bottom: 1px dashed #E0E0E0;
+    color: #333;
+}
+.post-title a:hover
+{
+    text-decoration: none;
+    color: #333;
+}
+.post-content
+{
+    border-bottom: 1px solid #EEEEEE;
     word-wrap: break-word;
-    color: #34495e;
-    font-size: 16px;
-    line-height: 1.6em;
+    color: #333;
+    line-height: 1.6;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.post-content small
+{
+    float: right;
+    padding: 10px 5px;
+}
+.post-content h1, .post-content h2, .post-content h3
+{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.post-content h1, .post-title p
+{
+    font-size: 2.25em;
+}
+.post-content h2
+{
+    font-size: 1.75em;
+}
+.post-content h3
+{
+    font-size: 1.5em;
+}
+.post-content ul,.post-content ol
+{
+    margin-left: 3em;
+    padding-left: 0;
+}
+.post-content ul li
+{
+    list-style: initial;
 }
 .post-meta
 {
     display:block;
     width:100%;
-    padding: 14px 28px;
     color: #A0A0A0;
     font-size: 12.5px;
     overflow: hidden;
+    padding: 10px 0;
 }
 .post-meta span
 {
     float: left;
     padding: 5px 10px;
-    width: 170px;
+    width: 50%;
+}
+@media (min-width: 992px)
+{
+    .post-meta span
+    {
+        width: 20%;
+    }
 }
 .post-meta a
 {
@@ -151,15 +202,6 @@ pre, pre code{
     overflow: hidden;
     margin:0 14px;
 }
-.blog
-{
-    padding: 20px;
-    background-color: white !important;
-}
-.blog h5
-{
-    margin-top:15px !important;
-}
 .archive
 {
     overflow: hidden;
@@ -184,7 +226,7 @@ pre, pre code{
 {
     font-size: 16px;
     padding: 15px 20px;
-    border-bottom: 1px dashed #E0E0E0;
+    border-bottom: 1px solid #EEEEEE;;
 }
 
 .fix
