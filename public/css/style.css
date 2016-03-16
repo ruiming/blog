@@ -3,7 +3,7 @@
     font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
     text-decoration: none;
     padding: 0;
-    word-break: break-all;
+    word-break: break-word;
 }
 body
 {
@@ -12,8 +12,8 @@ body
 p img{
     padding: 10px 0;
 }
-pre, pre code{
-    white-space: pre !important;
+.post-content code,.post-content pre{
+    white-space: pre;
     word-wrap: normal;
     border: none !important;
 }
