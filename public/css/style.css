@@ -3,7 +3,6 @@
     font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
     text-decoration: none;
     padding: 0;
-    word-break: break-word;
 }
 body
 {
@@ -12,7 +11,7 @@ body
 p img{
     padding: 10px 0;
 }
-.post-content code,.post-content pre{
+.post-content pre code,.post-content pre{
     white-space: pre;
     word-wrap: normal;
     border: none !important;
@@ -95,7 +94,6 @@ a:hover
     color: #333;
     line-height: 1.6;
     overflow: hidden;
-    word-wrap: break-word;
 }
 .post-content small
 {
@@ -140,7 +138,7 @@ a:hover
     display:block;
     width:100%;
     color: #A0A0A0;
-    font-size: 12.5px;
+    font-size: 13px;
     overflow: hidden;
     padding: 10px 0;
 }
@@ -300,7 +298,7 @@ a:hover
     width:100%;
     padding: 14px;
     color: #A0A0A0;
-    font-size: 12.5px;
+    font-size: 12px;
     overflow: hidden;
 }
 .comment-meta span
@@ -332,11 +330,9 @@ a:hover
     border: none;
     border-bottom: 1px solid #D6D6D6;
     margin: 10px 0;
-    padding:6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
+    padding: 6px 12px;
     display: block;
-    width:100%;
+    width: 100%;
     outline: none;
     word-wrap: break-word;
     color: #34495e;
