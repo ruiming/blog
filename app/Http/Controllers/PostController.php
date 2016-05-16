@@ -28,7 +28,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::where('is_draft', '==', 0)
+            ->orderBy('created_at', 'desc')
+            ->get();
         return view('admin.post.index')->withPosts($posts);
     }
 

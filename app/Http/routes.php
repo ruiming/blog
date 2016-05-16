@@ -27,6 +27,7 @@ Route::group(['middleware' => ['web','throttle:30']], function () {
     Route::get('/archive','ArchiveController@getArchive');
     Route::get('/archive/{id}','ArchiveController@category');
     Route::get('/date/{year}/{month}','ArchiveController@date');
+    Route::get('/about/','AboutController@index');
     Route::auth();
 });
 Route::group(['middleware'=>['web','auth']],function(){
