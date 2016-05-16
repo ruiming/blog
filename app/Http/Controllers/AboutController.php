@@ -10,12 +10,11 @@ class AboutController extends Controller
 
     /**
      * 博客首页
-     * todo 草稿替代简历
+     * 11 是简历的ID
      */
     public function index()
     {
-        $post = Post::where('is_draft', '==', 1)
-            ->firstOrFail();
+        $post = Post::whereId(11)->firstOrFail();
         $post->content = EndaEditor::MarkDecode($post->content);
         return view('blog.about', compact('post'));
     }
