@@ -12,7 +12,7 @@ class AboutController extends Controller
      * 博客首页
      * todo 草稿替代简历
      */
-    public function main()
+    public function index()
     {
         $post = Post::where('is_draft', '==', 1)
             ->firstOrFail();
