@@ -24,7 +24,7 @@ class ArchiveController extends Controller
     public function getArchive()
     {
         $categorys = Archive::orderBy('counts', 'desc')->get()->toarray();
-        $times = Post::orderBy('created_at', 'desc')->get()->toarray();
+        $times = Post::orderBy('created_at', 'desc')->where('is_draft', '==', 0)->get()->toarray();
         $j = 0;
         $dates = array([]);
         foreach($times as $time) {
@@ -50,7 +50,7 @@ class ArchiveController extends Controller
      */
     public function category($slug)
     {
-        $archive = Archive::whereSlug($slug)->where('is_draft', '==', 0)->first()->name;
+        $archive = Archive::whereSlug($slug)->first()->name;
         $posts = Post::whereArchive($archive)->where('is_draft', '==', 0)->orderBy('created_at', 'desc')->get();
         foreach($posts as $post) {
             $post->content = EndaEditor::MarkDecode($post->content);
@@ -67,7 +67,7 @@ class ArchiveController extends Controller
     public function date($year, $month)
     {
         $time = $year."-".$month;
-        $posts = Post::orderBy('created_at', 'desc')->where('is_draft', '==', 0)->get();
+        $posts = Post::orderBy('created_at', 'desc')->get();
         $i = 0;
         $result = array([]);
         foreach($posts as $post) {
