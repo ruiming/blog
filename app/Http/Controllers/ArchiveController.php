@@ -67,7 +67,7 @@ class ArchiveController extends Controller
     public function date($year, $month)
     {
         $time = $year."-".$month;
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::orderBy('created_at', 'desc')->where('is_draft', '==', 0)->get();
         $i = 0;
         $result = array([]);
         foreach($posts as $post) {

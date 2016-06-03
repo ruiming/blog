@@ -11,7 +11,8 @@
                 </div>
             </li>
         @endforeach
-        <div class="clearfix fix"></div>
+    </ul>
+    <ul class="archive">
         <p><span class="glyphicon glyphicon-calendar"></span>时间</p>
         @foreach ($dates as $date)
             <li class="archive">
